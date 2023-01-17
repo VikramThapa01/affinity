@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .error{
+            color: red;
+            background-color: #f4dede;
+        }
+    </style>
+</head>
+<body>
+    <h2>HTML Form</h2>
+    <div class="container">
+        <div>
+            <span id="universal_error" style="color:red;background-color: #f4dede;"></span>
+        </div><br>
+        <form method="POST" enctype="multipart/form-data" action="" id="persnal">
+            <table>
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" name="first_name" id="first_name" onkeyup="first_name_validation()"></td>
+                    <td><span class="error" id="first_name_error"></span></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" name="last_name" id="last_name" onkeyup="last_name_validation()"></td>
+                    <td ><span class="error" id="last_name_error"></span></td>
+                </tr>
+                <tr>
+                    <td>Email ID</td>
+                    <td><input type="text" name="email" id="email"></td>
+                    <td ><span class="error" id="email_error"></span></td>
+                </tr>
+                <tr>
+                    <td>Phone Number</td>
+                    <td><input type="text" name="phone" id="phone" onkeyup="phone_validation()"></td>
+                    <td><span class="error" id="phone_error"></span></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><select name="gender" id="gender" style="width: 100% !important;">
+                            <option value="">Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                            <option value="Prefer not to answer">Perfer not to Answer</option>
+                        </select>
+                    </td>
+                    <td><span class="error" id="gender_error"></span></td>
+                </tr>
+                <tr>
+                    <td>10th Marks(in %)</td>
+                    <td><input type="text" name="marks" id="marks" onkeyup="marks_validation()"></td>
+                    <td><span class="error" id="marks_error"></span></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="text" name="age" id="age" onkeyup="age_validation()"></td>
+                    <td><span class="error" id="age_error"></span></td>
+                </tr>
+                <tr>
+                    <td><button type="button" id="submit">Submit</button></td>
+                    <td><button type="reset" id="reset">Reset</button></td>
+                </tr>
+            </table>
+        </form><br>
+        <div>
+            <span id="insert_msg" style="color:green;background-color: #dbf4de;"></span>
+        </div><br><br>
+        <div id="disp_table">
+            <table border="1" style="width: 100%;" id="disp_table_data">
+                
+              </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
